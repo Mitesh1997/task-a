@@ -1,0 +1,215 @@
+
+/* .App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  overflow: hidden;
+  height:  100vh;
+} */
+
+/* Masterview Styling */
+/* .masterview {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  overflow-x: scroll;
+  width: 100%;
+} */
+
+.App{
+  display: flex;
+  margin:  2%;
+  height: 100vh;
+
+}
+
+.detailView{
+width: 94%;
+}
+
+.masterview{
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--Gray-200, #EAECF0);
+  background: var(--Base-White, #FFF);
+  max-width:  448px;
+  /* Shadows/shadow-xs */
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  overflow-y: scroll;
+  max-width: 30vp;
+  cursor: pointer;
+  gap: 20px;
+}
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card.selected {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Box shadow for selected card */
+}
+
+
+.card{
+  display: flex;
+padding-top: 2px;
+align-items: flex-start;
+gap: 16px;
+flex: 1 0 0;
+border: 1px solid #ddd;
+border-radius: 5px;
+overflow: hidden;
+cursor: pointer;
+transition: box-shadow 0.3s ease;
+position: relative;
+}
+.card-img{
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  /* width: 100%; */
+  height: 200px;
+  overflow: hidden;
+}
+.card-img>img{
+  /* width:  126px 38px 8px 8px; */
+  width: 128px;
+  /* height:  128px; */
+  /* background: #000; */
+  padding-right: 20px;
+  
+}
+.card-img-detail{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    background-color: #EAECF0;
+    padding: 4px;
+    border-radius: 15px;
+}
+
+.card-text{
+  display: flex;
+  padding-top: 2px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 0 0;
+}
+.card-category{
+  gap: 20px;
+  color: var(--Brand-700, #6941C6);
+
+  /* Text sm/Semibold */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+}
+
+.card-tital{
+  overflow: hidden;
+color: var(--Gray-900, #101828);
+text-overflow: ellipsis;
+
+/* Text lg/Medium */
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 155.556% */
+}
+
+.card-description{
+  overflow: hidden;
+color: var(--Gray-600, #475467);
+text-overflow: ellipsis;
+
+/* Text md/Regular */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+.card-price{
+  color: var(--Gray-900, #101828);
+
+/* Text xl/Semibold */
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 30px; /* 150% */
+}
+
+
+/* details */
+
+.detail-img{
+  height: 28.75rem;
+min-height: 28.75rem;
+align-self: stretch;
+border-radius: 0.5rem;
+display: flex;
+justify-content: center;
+/* background: url(<path-to-image>) lightgray 307px 40.55px / 28.935% 82.369% no-repeat, #F4F6FA; */
+background-blend-mode: multiply, normal;
+}
+
+.nothingShow{
+
+}
+
+
+/* responcive */
+/* 
+@media only screen and (m-width: 420px) {
+  .detail-view{
+    display: none;
+  }
+} */
+
+.detail-view{
+  width: 100%;
+}
+
+.detail-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height for vertical centering */
+  text-align: center;
+}
+
+.empty-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%; /* Take up the full height of the parent */
+}
+
+.viwe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .btn-view {
+    display: none; /* Show the button on larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-view {
+    display: block; /* Hide the button on smaller screens */
+  }
+}
